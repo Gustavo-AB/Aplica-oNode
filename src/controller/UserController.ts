@@ -24,4 +24,14 @@ export class UserController {
         const user = this.userService.getAllUsers()
         return res.status(200).json( user )
     }
+
+    public deleteUser = (req: Request, res: Response) => {
+        const user = this.userService.getAllUsers()
+        if(user.length === 0){
+            return res.status(204).json({ message: 'Não há usuarios para serem deletados!' })
+        }
+
+        this.userService.deleteUser()
+        return res.status(200).json({ message: 'Usuario Deletado com Sucesso!' })
+    }
 }
