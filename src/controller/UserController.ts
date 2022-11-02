@@ -11,7 +11,7 @@ export class UserController {
             return res.status(400).json({ message: "Bad request! Name is required" })
         }
 
-        userService.createuser(user.name, user.email)
+        userService.createUser(user.name, user.email)
         return res.status(201).json({ message: 'Usuario Criado' })
     }
 
