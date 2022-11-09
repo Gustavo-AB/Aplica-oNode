@@ -21,6 +21,11 @@ export class UserService {
         console.log("DB Atualizado", this.db)
     }
 
+    public deleteUser = () => {
+        this.db.pop()
+        console.log("Usuario Deletado.", this.db)
+    }
+
     public getAllUsers = () => {
         return this.db
     }
