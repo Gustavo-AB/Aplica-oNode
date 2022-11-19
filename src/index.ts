@@ -19,7 +19,7 @@ AppDataSource.initialize()
 
 
 app.get("/", (req: Request, res: Response) => {
-    return res.sendFile(path.join(__dirname) + "/index.html" )
+    return res.status(200).json({ message: "Tudo Ok!" })
 })
 
 
