@@ -12,6 +12,8 @@ export class UserRepositorie {
     }
 
     createUser = async (user:User)=>{
+        // const newUser = this.manager.create(user)
+
         return this.manager.save(user)
     }
 }
